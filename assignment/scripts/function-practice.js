@@ -22,17 +22,21 @@ console.log(helloName('Anthony'))
 console.log(helloName('Mia'))
 
 // 3. Function to add two numbers together & return the result
-function addNumbers(firstNumber) {
-  return 10 + 5;
-  // return firstNumber + secondNumber;
+function addNumbers( firstNumber,secondNumber ) {
+  let answer = firstNumber + secondNumber;
+  return answer;
+// return firstNumber + secondNumber;
 }
-console.log(firstNumber)
-
+console.log('added 10 & 5',addNumbers(10,5));
+console.log('added 3 & 7',addNumbers(3,7));
 // 4. Function to multiply three numbers & return the result
-function multiplyThree() {
-
+function multiplyThree( num1, num2, num3 ) {
+let answer = num1 * num2 * num3;
+return answer;
 }
-
+console.log('Multiplied 10 by 10 by 10',multiplyThree(10,10,10))
+console.log('Multiplied .156 by 121 by 15',multiplyThree(.156,121,15))
+console.log('Multiplied 17 by 3 by 21',multiplyThree(17,3,21))
 
 // 5. Function that will return true if a number is positive, 
 //    or greater than zero, and false otherwise
@@ -40,8 +44,13 @@ function isPositive(number) {
   if (number > 0) {
     return true;
   }
-  return;
+  else{
+    return false;
+  }
 }
+console.log('is 9 positive', isPositive(9))
+console.log('is -9 positive', isPositive(-9))
+console.log('is 0 positive', isPositive(0))
 // Call the function to test each outcome (true & false) 
 // Write a separate console.log statement for each outcome
 
