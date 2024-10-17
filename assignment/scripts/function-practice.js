@@ -48,26 +48,39 @@ function isPositive(number) {
     return false;
   }
 }
+
+// Call the function to test each outcome (true & false) 
+// Write a separate console.log statement for each outcome
 console.log('is 9 positive', isPositive(9))
 console.log('is -9 positive', isPositive(-9))
 console.log('is 0 positive', isPositive(0))
-// Call the function to test each outcome (true & false) 
-// Write a separate console.log statement for each outcome
-
 
 // 6. Function to return the _last_ item in an array. If the 
 //    array is empty, return `undefined`.
 function getLast(array) {
-
+if (array.length === 0 ){
+  return undefined;
+}
+return array[array.length - 1 ];
 }
 
+console.log(getLast([10, 9, 8, 7]));
+console.log(getLast([`cat`, `dog`, `fish`]));
+console.log(getLast([]));
 // 7. Function to find a value in an array. Return true if the 
 //    value is found and false otherwise. Use a loop;
 //    DO NOT use Array.includes, Array.indexOf, or Array.find 
 function find(value, array) {
-
+for (let i = 0; i < array.length; i++) {
+if (array[i] === value) {
+  return true;
 }
-
+  } 
+  return false;
+}
+console.log(find(10,[5, 10, 20, 40]));
+console.log(find(`Car`,[`Truck`, `SUV`, `Motercycle`, `Car`]));
+console.log(find(`Waldo`,[`Anthony`, `Dane`, `Bethany`, `Matt`]));
 // ----------------------
 // Stretch Goals
 // ----------------------
